@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Calculator</title>
-        <link rel="stylesheet" href="calculator.css">
-    </head>
-    <body> 
-        <p class="text"> <br> Simple Calculator</p>
-        <div class="calculator-layout">
-            <input class="input-box" type="text" id="display" placeholder="  0" readonly>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body> 
+    <p class="text"> <br> Simple Calculator</p>
+    <div class="calculator-layout">
+        <input class="input-box" type="text" id="display" placeholder="  0" readonly>
+        <div class="line">
             <button class="ac-button" onclick="clearDisplay()">AC</button>
+            
+        </div>
+        
         <div class="line">
             <button class="button" onclick="setOperator('+')">+</button>
             <button class="button" onclick="setOperator('-')">-</button>
@@ -33,6 +37,6 @@
             <button class="operator" onclick="calculate()">=</button>
         </div>
     </div>
-        <script src="calculator.js"></script>
-    </body>
+    <script src="calculator.js"></script>
+</body>
 </html>
