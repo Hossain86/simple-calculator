@@ -49,5 +49,5 @@ function calculate() {
 }
 
 function updateDisplay() {
-  display.value = currentInput;
+  display.value = operand1 + ' ' + operator + ' ' + currentInput;
 }
