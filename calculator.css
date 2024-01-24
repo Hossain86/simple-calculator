@@ -1,36 +1,42 @@
-body{
+body {
     margin: 0;
     background-color: rgb(180, 188, 195);
 }
-.text{
-    display: grid;
-    grid-template-columns: 1fr;
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #333;
     text-align: center;
-    margin-top: 0;
+    
     color: white;
     font-stretch: extra-expanded;
-    margin-bottom: 10px;
+    margin: 0;
+    padding: 25px;
     font-size: 20px;
-    font-family:Arial, Helvetica, sans-serif ;
-    height: 80px;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.calculator-layout{
-    margin-left: 30%;
-    margin-right: 20%;
-    margin-top: 30px;
+
+.calculator-layout {
+    display: flex;
+    flex-direction: column;
+    
+    margin: 30px auto;
     height: 680px;
-    width: 550px;
+    width: 90%; /* Adjust the width as needed */
+    max-width: 580px; /* Set a maximum width for larger screens */
     background-color: rgba(87, 83, 79, 0.839);
     border: none;
     border-radius: 10px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.498);
+    box-shadow: 10px 10px 10px rgba(60, 24, 24, 0.498);
 }
 
-.input-box{
-    width: 88%;
-    margin-left: 30px;
+.input-box {
+    
+    width: 85%;
     margin-top: 20px;
+    margin-left: 30px;
     margin-bottom: 20px;
     height: 65px;
     font-size: 25px;
@@ -39,40 +45,62 @@ body{
     background-color: rgb(200, 213, 225);
     color: black;
 }
-.line{
-    margin-left: 30px;
-}
-.button,.operator,.ac-button{
-    width: 100px;
-    margin-right: 20px;
-    margin-bottom: 30px;
-    height: 75px;
-    cursor: pointer;
-    transition:box-shadow 0.15s;
-}
-.button:hover{
-    opacity: 0.6;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0,0.2);
-}
-.operator:hover{
-    opacity: 0.6;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0,0.2);
-}
-.ac-button{
-    margin-top: 30px;
-    margin-left: 30px;
-    transition:box-shadow 0.15s;
-}
-.ac-button:hover{
-    opacity: 0.6;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0,0.2);
+
+.line {
+    width: 100%;
+    margin-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
-.button,.ac-button,.operator{
+.button,
+.operator,
+.ac-button {
+    width: calc(24% - 20px);
+    margin: 0 10px 30px 10px;
+    height: 75px;
+    cursor: pointer;
+    transition: box-shadow 0.15s;
+    box-shadow: 10px 10px 10px rgba(44, 105, 141, 0.2);
+}
+
+.button:hover,
+.operator:hover,
+.ac-button:hover {
+    opacity: 0.6;
+    box-shadow: 10px 10px 10px rgba(19, 18, 18, 0.2);
+}
+
+.ac-button {
+    margin-top: 30px;
+    
+    margin-bottom: 20px;
+    transition: box-shadow 0.15s;
+}
+
+
+.button,
+.ac-button,
+.operator{
     background-color: rgb(27, 26, 26);
     color: white;
     font-size: 25px;
     border: none;
     border-radius: 10px;
     font-family: Arial;
+}
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .calculator-layout {
+        width: 90%; /* Adjust the width for smaller screens */
+    }
+
+    .button,
+    .operator,
+    .ac-button{
+        width: calc(33.33% - 20px);
+        margin: 0 10px 20px 10px;
+    }
 }
