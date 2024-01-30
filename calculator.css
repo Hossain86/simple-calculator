@@ -13,7 +13,7 @@ body {
     color: white;
     font-stretch: extra-expanded;
     margin: 0;
-    padding: 25px;
+    padding: 15px;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -21,15 +21,15 @@ body {
 .calculator-layout {
     display: flex;
     flex-direction: column;
-    
-    margin: 30px auto;
-    height: 680px;
+    border-color: black;
+    margin: 20px auto;
+    height: 580px;
     width: 90%; /* Adjust the width as needed */
-    max-width: 580px; /* Set a maximum width for larger screens */
-    background-color: rgba(87, 83, 79, 0.839);
-    border: none;
-    border-radius: 10px;
-    box-shadow: 10px 10px 10px rgba(60, 24, 24, 0.498);
+    max-width: 450px; /* Set a maximum width for larger screens */
+    background-color: rgba(139, 136, 136, 0.518);
+    
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(23, 20, 20, 0.765);
 }
 
 .input-box {
@@ -37,62 +37,65 @@ body {
     width: 85%;
     margin-top: 20px;
     margin-left: 30px;
-    margin-bottom: 20px;
-    height: 65px;
+    height: 55px;
     font-size: 25px;
-    border-radius: 10px;
+    border-radius: 20px;
     font-family: Arial;
-    background-color: rgb(200, 213, 225);
+    background-color: rgb(224, 229, 233);
     color: black;
+    box-shadow: 10px 10px 10px rgba(70, 62, 62, 0.468);
 }
 
 .line {
-    width: 100%;
-    margin-left: 15px;
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    margin-left: 15px;
+    max-width: 450px;
     
 }
 
 .button,
 .operator,
 .ac-button {
-    width: calc(24% - 20px);
-    margin: 0 10px 30px 10px;
-    height: 75px;
+    width: calc(23% - 20px);
+    margin: 0 10px 20px 10px;
+    height: 65px;
     cursor: pointer;
     transition: box-shadow 0.15s;
-    box-shadow: 10px 10px 10px rgba(44, 105, 141, 0.2);
+    box-shadow: 10px 10px 10px rgba(16, 17, 17, 0.366);
 }
 
 .button:hover,
 .operator:hover,
 .ac-button:hover {
-    opacity: 0.6;
-    box-shadow: 10px 10px 10px rgba(19, 18, 18, 0.2);
+    opacity: 0.8;
 }
 
+.button:active,
+.operator:active,
+.ac-button:active {
+    opacity: 0.4;
+}
 .ac-button {
     margin-top: 30px;
-    
     margin-bottom: 20px;
-    transition: box-shadow 0.15s;
 }
-
 
 .button,
 .ac-button,
 .operator{
-    background-color: rgb(27, 26, 26);
+    background-color: rgba(15, 15, 15, 0.884);
     color: white;
     font-size: 25px;
+    font-weight: bold;
     border: none;
-    border-radius: 10px;
+    border-radius: 30px;
     font-family: Arial;
 }
 
 /* Media Query for smaller screens */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 450px) {
     .calculator-layout {
         width: 90%; /* Adjust the width for smaller screens */
     }
